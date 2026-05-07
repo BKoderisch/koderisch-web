@@ -50,22 +50,6 @@ nav.compact {
   border-bottom: 1px solid var(--gray-700);
 }
 
-@media (max-width: 600px) {
-  nav {
-    padding: 20px 24px;
-    justify-content: center;
-  }
-  nav.compact {
-    padding: 14px 24px;
-  }
-  .nav-links {
-    display: none;
-  }
-  .nav-logo {
-    font-size: 26px;
-  }
-}
-
 .nav-logo {
   font-family: var(--serif);
   font-size: 22px;
@@ -448,6 +432,90 @@ footer .copy {
 nav { animation: fadeUp 0.5s ease both; }
 .hero { animation: fadeUp 0.5s 0.1s ease both; }
 .section-header { animation: fadeUp 0.5s 0.2s ease both; }
+
+@media (max-width: 768px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .serie-intro {
+    grid-template-columns: 1fr;
+  }
+  .serie-intro-img img {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 20px 24px;
+    justify-content: center;
+  }
+  nav.compact {
+    padding: 14px 24px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-logo {
+    font-size: 26px;
+  }
+
+  .hero-text {
+    left: 24px;
+    right: 24px;
+    bottom: 40px;
+  }
+
+  .section-header {
+    padding: 48px 24px 28px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .serie-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .serie-intro-text {
+    padding: 36px 24px;
+  }
+
+  .serie-intro-text h2 {
+    font-size: 32px;
+  }
+
+  .serie-intro-img img {
+    min-height: 240px;
+  }
+
+  #info {
+    padding: 48px 24px !important;
+    margin-top: 48px !important;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+
+  .info-stats {
+    flex-wrap: wrap;
+    gap: 20px !important;
+  }
+
+  footer {
+    padding: 32px 24px;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
 </style>
 </head>
 <body>
@@ -556,7 +624,7 @@ nav { animation: fadeUp 0.5s ease both; }
 
 <!-- INFO -->
 <div id="info" style="padding: 80px 48px; border-top: 1px solid var(--gray-700); margin-top: 80px;">
-  <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start;">
+  <div class="info-grid" style="display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start;">
     <div>
       <div style="font-size:10px; letter-spacing:0.2em; color:var(--red); text-transform:uppercase; margin-bottom:24px;">// Info</div>
       <h2 style="font-family:var(--serif); font-size:40px; font-weight:400; letter-spacing:-0.02em; line-height:1.1; margin-bottom:32px;">Über<br><em style="color:var(--gray-200);">koderisch</em></h2>
@@ -564,7 +632,7 @@ nav { animation: fadeUp 0.5s ease both; }
     <div>
       <p style="color:var(--gray-200); font-size:15px; line-height:1.9; margin-bottom:24px; font-family:var(--serif);">Ich bin Benni — Programmierer und Fotograf. koderisch.art ist der Ort, wo Code auf Bild trifft. Meine Kamera ist eine Fujifilm X-T5, mein Sujet ist die Stadt: ihre Geometrien, ihr Licht, ihre Bewegung.</p>
       <p style="color:var(--gray-400); font-size:13px; line-height:1.8;">Straßenfotografie. Langzeitbelichtung. Abstraktion. Immer auf der Suche nach dem Moment, in dem die Infrastruktur zur Komposition wird.</p>
-      <div style="margin-top:40px; display:flex; gap:32px;">
+      <div class="info-stats" style="margin-top:40px; display:flex; gap:32px;">
         <div>
           <div style="font-size:10px; letter-spacing:0.15em; color:var(--red); text-transform:uppercase; margin-bottom:8px;">Kamera</div>
           <div style="color:var(--white);">Fujifilm X-T5</div>
